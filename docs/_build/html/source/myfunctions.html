@@ -80,6 +80,7 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">myfunctions package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-myfunctions.heatequation">myfunctions.heatequation module</a></li>
 <li><a class="reference internal" href="#module-myfunctions.integration">myfunctions.integration module</a></li>
 <li><a class="reference internal" href="#module-myfunctions.main">myfunctions.main module</a></li>
 <li><a class="reference internal" href="#module-myfunctions">Module contents</a></li>
@@ -153,6 +154,41 @@
 <h1>myfunctions package<a class="headerlink" href="#myfunctions-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-myfunctions.heatequation">
+<span id="myfunctions-heatequation-module"></span><h2>myfunctions.heatequation module<a class="headerlink" href="#module-myfunctions.heatequation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="myfunctions.heatequation.heat1D_solver">
+<code class="descclassname">myfunctions.heatequation.</code><code class="descname">heat1D_solver</code><span class="sig-paren">(</span><em>dx</em>, <em>dt</em>, <em>L</em>, <em>t</em>, <em>T0</em>, <em>BC</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/myfunctions/heatequation.html#heat1D_solver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#myfunctions.heatequation.heat1D_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves the 1D heat equation with Dirichlet boundary conditions on the domain [0,L]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dx</strong> (<em>float</em>) – Spatial grid size</li>
+<li><strong>dt</strong> (<em>float</em>) – Temporal grid size</li>
+<li><strong>L</strong> (<em>float</em>) – Length of the domain</li>
+<li><strong>t</strong> (<em>tuple</em><em>, </em><em>list</em><em>, </em><em>np.array</em>) – Initial and final time provided as an interval [t0, tFinal]</li>
+<li><strong>T0</strong> (<em>float</em>) – Initial temperature</li>
+<li><strong>BC</strong> (<em>tuple</em><em>, </em><em>list</em><em>, </em><em>np.array</em>) – Boundary temperatures provided at the tuple [LeftTemperature, RightTemperature]</li>
+<li><strong>alpha</strong> (<em>float</em>) – Thermal diffusivity</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>x</strong> (<em>np.array</em>) – Vector containing finite difference gridpoints</li>
+<li><strong>t</strong> (<em>np.array</em>) – Vector containing discretised time</li>
+<li><strong>T</strong> (<em>np.array</em>) – Array containing computed temperature; each row corresponds to a given timestep
+and each column corresponds to a spatial gridpoint</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-myfunctions.integration">
 <span id="myfunctions-integration-module"></span><h2>myfunctions.integration module<a class="headerlink" href="#module-myfunctions.integration" title="Permalink to this headline">¶</a></h2>
