@@ -2,6 +2,9 @@
 
 ## Installation 
 This is how you install the thing
+```
+git clone LINK
+```
 
 ## Example 
 This is an example of how to use the thing
