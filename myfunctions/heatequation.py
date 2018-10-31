@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def heat1D_solver(dx, dt, length, t, T0, BC, alpha):
 
-    time = np.arange(t[0], t[-1], dt)
+    time = np.arange(t[0], t[-1] + dt, dt)
     x = np.arange(0, length + dx, dx)
 
     T = np.ones([np.size(time), np.size(x)])*T0
