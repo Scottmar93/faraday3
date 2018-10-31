@@ -28,9 +28,8 @@ def mybisection(myfunc, a, b, epsilon):
 
     return m
 
-
+"""
 m = mybisection(myfunc, 3.8, 6, 0.001)
-
 x = np.linspace(m - 1, m + 1, 100)
 plt.plot(x, myfunc(x))
 plt.plot(m, 0, 'bo')
@@ -44,5 +43,7 @@ plt.show()
 def f(x):
     return x
 
-print(mybisection(f, -3.0, 3.0, 0.001))
 
+print(mybisection(f, -0.5, 0.5, 0.001))
+
+"""
