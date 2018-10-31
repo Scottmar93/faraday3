@@ -1,16 +1,38 @@
-import numpy as np
-from scipy import optimize
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-# whatever the function should be
-def f(x):
-    return x
+def myfunc(x):
+    return np.sin(x**2) - x + 5
 
 
-# def mybisection(f, a, b, epsilon):
-#    return x
+def mybisection(myfunc, a, b, epsilon):
 
-root = optimize.newton(f, 1.5)
+    if abs(myfunc(a)) < epsilon:
+        print('a is a root!')
+        return a
 
-print(root)
+    if abs(myfunc(b)) < epsilon:
+        print('b is a root!')
+        return b
+
+    while abs(b-a) > epsilon:
+
+        m = a + (b - a)/2
+        print(m)
+
+        if myfunc(a)*myfunc(m) < 0:
+            b = m
+        else:
+            a = m
+
+    return m
+
+
+m = mybisection(myfunc, 3.8, 6, 0.001)
+
+x = np.linspace(m - 1, m + 1 , 100)
+plt.plot(x, myfunc(x))
+plt.plot(m, 0, 'bo')
+plt.grid()
+plt.show()
