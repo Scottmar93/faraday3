@@ -31,7 +31,7 @@ def mybisection(myfunc, a, b, epsilon):
 
 m = mybisection(myfunc, 3.8, 6, 0.001)
 
-x = np.linspace(m - 1, m + 1 , 100)
+x = np.linspace(m - 1, m + 1, 100)
 plt.plot(x, myfunc(x))
 plt.plot(m, 0, 'bo')
 plt.grid()
