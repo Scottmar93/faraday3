@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import animation
 
 
 def heat1D_solver(dx, dt, length, t, T0, BC, alpha):
@@ -15,9 +14,18 @@ def heat1D_solver(dx, dt, length, t, T0, BC, alpha):
     for i in range(0, np.size(time)-1):
         T[i+1, 1:-1] = (alpha*dt/dx**2)*(T[i, 2:] + T[i, 0:-2]) + (1 - 2*alpha*dt/dx**2)*T[i, 1:-1]
 
+        # plot current time
+        plt.clf()
+        plt.plot(x, T[i+1, :])
+        plt.title('Time = {} seconds'.format(time[i+1]))
+        plt.xlabel('x')
+        plt.ylabel('T')
+        plt.pause(0.005)
+
     return x, t, T
 
 
+# Parameters and step sizes
 dx = 0.01
 dt = 1
 length = 0.5
@@ -26,16 +34,13 @@ T0 = 10
 BC = [50, 50]
 alpha = 1.172*10**(-5)
 
-print(alpha*dt/dx**2)
+
+# solve
 x, t, temperature = heat1D_solver(dx, dt, length, t, T0, BC, alpha)
 
-plt.plot(x,temperature[-1, :])
+# plot final time
+plt.plot(x, temperature[-1,:])
 plt.show()
-
-
-
-
-
 
 
 
