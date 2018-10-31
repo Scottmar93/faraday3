@@ -20,4 +20,8 @@ def test_integration():
     assert abs(mytrapz(x, y)-0.5) <= h
 
 
+
 # Heat equation tests
+
+def test_heatequation():
+    assert 0==1
