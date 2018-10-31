@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to the documentation for Scott, Robert and Ian's Functions for Simple Numerical Tools!
-========================================================================================
+==============================================================================================
 
 .. toctree::
    :maxdepth: 2
