@@ -29,7 +29,7 @@ alpha = 1.172*10**(-5)
 print(alpha*dt/dx**2)
 x, t, temperature = heat1D_solver(dx, dt, length, t, T0, BC, alpha)
 
-plt.plot(x,temperature[-1,:])
+plt.plot(x,temperature[-1, :])
 plt.show()
 
 
