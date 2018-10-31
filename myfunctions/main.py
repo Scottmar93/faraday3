@@ -19,7 +19,7 @@ def mybisection(myfunc, a, b, epsilon):
     while abs(b-a) > epsilon:
 
         m = a + (b - a)/2
-        print(m)
+        #print(m)
 
         if myfunc(a)*myfunc(m) < 0:
             b = m
@@ -28,10 +28,9 @@ def mybisection(myfunc, a, b, epsilon):
 
     return m
 
-
+"""
 m = mybisection(myfunc, 3.8, 6, 0.001)
-
-x = np.linspace(m - 1, m + 1 , 100)
+x = np.linspace(m - 1, m + 1, 100)
 plt.plot(x, myfunc(x))
 plt.plot(m, 0, 'bo')
 plt.grid()
@@ -39,3 +38,12 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.title('root finding plot')
 plt.show()
+
+
+def f(x):
+    return x
+
+
+print(mybisection(f, -0.5, 0.5, 0.001))
+
+"""
