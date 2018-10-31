@@ -1,4 +1,4 @@
-from myroot import *
+from myfunctions import *
 
 
 # we could also write a bunch of other tests here
