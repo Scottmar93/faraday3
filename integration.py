@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def myfunc(x):
@@ -19,8 +20,14 @@ N = 100
 
 # Integrate myfunc using mytrapz
 x = np.linspace(a, b, N)
-integral = mytrapz(x, myfunc(x))
+y = myfunc(x)
+integral = mytrapz(x, y)
 print(integral)
 
+plt.plot(x, y)
+plt.title('A plot of the function to be integrated')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
 
 
