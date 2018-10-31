@@ -13,6 +13,7 @@ def mytrapz(x,y):
     return result
 
 
+"""
 # Choose integration limits (a,b) and number of points N
 a = 0
 b = 4
@@ -29,5 +30,4 @@ plt.title('A plot of the function to be integrated')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
-
-
+"""
