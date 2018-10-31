@@ -8,12 +8,12 @@ def myfunc(x):
     
     Parameters
     -----------
-    float, x:
+    x : float, int
         Point at which function is to be evaluated
     
     Returns
     ---------
-    float, y:
+    y : float
         Function value at input point x
     
     """
@@ -36,15 +36,15 @@ def mytrapz(x,y):
 
     Parameters
     ----------
-    float, x:
+    x : float
         Spatial points for the domain of integration. Grid size is assumed uniform and calculated by :math:`x_1-x_0`.
     
-    float, y:
+    y : float
         Function points calculated at the spatial points in :math:`x`. Each element of the list :math:`y_i` is the function evaluated at :math:`x_i`.
 
     Returns
     -------
-    float, result:
+    result : float
         Approximation to the integral of the function.
     
     """

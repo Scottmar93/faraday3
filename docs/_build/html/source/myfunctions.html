@@ -47,11 +47,11 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>float</em><em>,</em>) – Point at which function is to be evaluated</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>float</em><em>, </em><em>int</em>) – Point at which function is to be evaluated</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Function value at input point x</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>y</strong> – Function value at input point x</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float, y</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
 </tr>
 </tbody>
 </table>
@@ -70,15 +70,15 @@ The spacing between spatial points is assumed uniform with grid size <span class
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>float</em><em>,</em>) – Spatial points for the domain of integration. Grid size is assumed uniform and calculated by <span class="math notranslate nohighlight">\(x_1-x_0\)</span>.</li>
-<li><strong>y</strong> (<em>float</em><em>,</em>) – Function points calculated at the spatial points in <span class="math notranslate nohighlight">\(x\)</span>. Each element of the list <span class="math notranslate nohighlight">\(y_i\)</span> is the function evaluated at <span class="math notranslate nohighlight">\(x_i\)</span>.</li>
+<li><strong>x</strong> (<em>float</em>) – Spatial points for the domain of integration. Grid size is assumed uniform and calculated by <span class="math notranslate nohighlight">\(x_1-x_0\)</span>.</li>
+<li><strong>y</strong> (<em>float</em>) – Function points calculated at the spatial points in <span class="math notranslate nohighlight">\(x\)</span>. Each element of the list <span class="math notranslate nohighlight">\(y_i\)</span> is the function evaluated at <span class="math notranslate nohighlight">\(x_i\)</span>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Approximation to the integral of the function.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> – Approximation to the integral of the function.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float, result</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
 </td>
 </tr>
 </tbody>

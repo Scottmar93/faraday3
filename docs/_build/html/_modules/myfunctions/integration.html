@@ -43,12 +43,12 @@
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
 <span class="sd">    -----------</span>
-<span class="sd">    float, x:</span>
+<span class="sd">    x : float, int</span>
 <span class="sd">        Point at which function is to be evaluated</span>
 <span class="sd">    </span>
 <span class="sd">    Returns</span>
 <span class="sd">    ---------</span>
-<span class="sd">    float, y:</span>
+<span class="sd">    y : float</span>
 <span class="sd">        Function value at input point x</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -71,15 +71,15 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    float, x:</span>
+<span class="sd">    x : float</span>
 <span class="sd">        Spatial points for the domain of integration. Grid size is assumed uniform and calculated by :math:`x_1-x_0`.</span>
 <span class="sd">    </span>
-<span class="sd">    float, y:</span>
+<span class="sd">    y : float</span>
 <span class="sd">        Function points calculated at the spatial points in :math:`x`. Each element of the list :math:`y_i` is the function evaluated at :math:`x_i`.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    float, result:</span>
+<span class="sd">    result : float</span>
 <span class="sd">        Approximation to the integral of the function.</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -89,24 +89,24 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<span class="c1"># Choose integration limits (a,b) and number of points N</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"># Choose integration limits (a,b) and number of points N</span>
+<span class="sd">a = 0</span>
+<span class="sd">b = 4</span>
+<span class="sd">N = 100</span>
 
-<span class="c1"># Integrate myfunc using mytrapz</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">integral</span> <span class="o">=</span> <span class="n">mytrapz</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">integral</span><span class="p">)</span>
+<span class="sd"># Integrate myfunc using mytrapz</span>
+<span class="sd">x = np.linspace(a, b, N)</span>
+<span class="sd">y = myfunc(x)</span>
+<span class="sd">integral = mytrapz(x, y)</span>
+<span class="sd">print(integral)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A plot of the function to be integrated&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-
+<span class="sd">plt.plot(x, y)</span>
+<span class="sd">plt.title(&#39;A plot of the function to be integrated&#39;)</span>
+<span class="sd">plt.xlabel(&#39;x&#39;)</span>
+<span class="sd">plt.ylabel(&#39;y&#39;)</span>
+<span class="sd">plt.show()</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 
           </div>
