@@ -4,6 +4,14 @@ myfunctions package
 Submodules
 ----------
 
+myfunctions.heatequation module
+-------------------------------
+
+.. automodule:: myfunctions.heatequation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 myfunctions.integration module
 ------------------------------
 
